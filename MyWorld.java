@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * The world where the frog lives.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Anya Shah 
+ * @version November 25th, 2022
  */
 public class MyWorld extends World
 {
@@ -17,5 +17,7 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
+        Frog frog = new Frog();
+        addObject(frog, 100, 200);
     }
 }
