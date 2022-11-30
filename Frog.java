@@ -4,13 +4,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * The frog will move.
  * 
  * @author Anya Shah
- * @version November 25th, 2022
+ * @version November 30th, 2022
  */
 public class Frog extends Actor
 {
     /**
-     * Act - do whatever the Frog wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Moves the frog using the arrow keys.
      */
     public void act()
     {
@@ -21,6 +20,20 @@ public class Frog extends Actor
         if(Greenfoot.isKeyDown("left"))
         {
             move(-2);
+        }
+        eat();
+    }
+    /**
+     * Removes the fly if the frog touches it. Then it spawns a new fly
+     * anywhere in the world.
+     */
+    public void eat()
+    {
+        if(isTouching(Fly.class))
+        {
+            removeTouching(Fly.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnFly();
         }
     }
 }

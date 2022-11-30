@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * The world where the frog lives.
  * 
  * @author Anya Shah 
- * @version November 25th, 2022
+ * @version November 30th, 2022
  */
 public class MyWorld extends World
 {
@@ -18,7 +18,7 @@ public class MyWorld extends World
         super(600, 400, 1);
         Frog frog = new Frog();
         addObject(frog, 50, 200);
-        
+        // Adds a fly randomly on the world
         spawnFly();
     }
     public void spawnFly()
