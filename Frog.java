@@ -14,6 +14,13 @@ public class Frog extends Actor
      */
     public void act()
     {
-        move(2);
+        if(Greenfoot.isKeyDown("right"))
+        {
+            move(2);
+        }
+        if(Greenfoot.isKeyDown("left"))
+        {
+            move(-2);
+        }
     }
 }
