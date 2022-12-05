@@ -4,10 +4,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * The world where the frog lives.
  * 
  * @author Anya Shah 
- * @version November 30th, 2022
+ * @version December 5th, 2022
  */
 public class MyWorld extends World
 {
+    public int score = 0;
+    Label scoreLabel;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -15,12 +17,38 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
+        super(600, 400, 1, false);
+        
+        // Create frog object
         Frog frog = new Frog();
         addObject(frog, 50, 200);
+        
+        // Create a label
+        scoreLabel = new Label(0, 80);
+        addObject(scoreLabel, 50, 50);
+         
         // Adds a fly randomly on the world
         spawnFly();
     }
+    
+    /*
+     * End the game and draw 'Game Over'
+     */
+    public void gameOver()
+    {
+        Label gameOverLabel = new Label ("Game Over! :( ", 100);
+        addObject(gameOverLabel, 300, 200);
+    }
+    
+    /*
+     * Increase score
+     */
+    public void increaseScore()
+    {
+        score++;
+        scoreLabel.setValue(score);
+    }
+    
     public void spawnFly()
     {
         Fly fly = new Fly();

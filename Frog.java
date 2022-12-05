@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * The frog will move.
  * 
  * @author Anya Shah
- * @version November 30th, 2022
+ * @version December 5th, 2022
  */
 public class Frog extends Actor
 {
@@ -34,6 +34,7 @@ public class Frog extends Actor
             removeTouching(Fly.class);
             MyWorld world = (MyWorld) getWorld();
             world.spawnFly();
+            world.increaseScore();
         }
     }
 }

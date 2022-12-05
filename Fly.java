@@ -17,5 +17,13 @@ public class Fly extends Actor
         int x = getX();
         int y = getY() + 1;
         setLocation(x, y);
+        
+        // Remove fly and draw game over when fly gets to bottom
+        MyWorld world = (MyWorld) getWorld();
+        if(getY() >= world.getHeight())
+        {
+            world.gameOver();
+            world.removeObject(this);
+        }
     }
 }
