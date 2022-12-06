@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Frog extends Actor
 {
+    GreenfootSound frogSound = new GreenfootSound("frogsound.mp3");
+    
     /**
      * Moves the frog using the arrow keys.
      */
@@ -35,6 +37,7 @@ public class Frog extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.spawnFly();
             world.increaseScore();
+            frogSound.play();
         }
     }
 }
