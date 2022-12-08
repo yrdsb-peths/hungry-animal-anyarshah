@@ -14,6 +14,10 @@ public class Frog extends Actor
     
     // Direction the frog is facing
     String facing = "right";
+    SimpleTimer animationTimer = new SimpleTimer();
+    /**
+     * Constructor
+     */
     
     public Frog()
     {
@@ -29,6 +33,8 @@ public class Frog extends Actor
             idleLeft[i].mirrorHorizontally();
             idleLeft[i].scale(100, 100);
         }
+        
+        animationTimer.mark();
         // Initial frog image
         setImage(idleRight[0]);
     }
@@ -38,6 +44,11 @@ public class Frog extends Actor
     int imageIndex = 0;
     public void animateFrog()
     {
+        if(animationTimer.millisElapsed() < 175)
+        {
+            return;
+        }
+        animationTimer.mark();
         if(facing.equals("right"))
         {
             setImage(idleRight[imageIndex]);   
@@ -50,7 +61,7 @@ public class Frog extends Actor
         }
     }
     
-    /**0
+    /**
      * Moves the frog using the arrow keys.
      */
     public void act()
