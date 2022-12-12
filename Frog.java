@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * The frog will move.
  * 
  * @author Anya Shah
- * @version December 8th, 2022
+ * @version December 12th, 2022
  */
 public class Frog extends Actor
 {
