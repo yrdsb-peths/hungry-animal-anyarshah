@@ -2,7 +2,7 @@
 class.Fly.image=fly.png
 class.Frog.image=frog.png
 class.MyWorld.image=Swamp.jpg
-class.TitleScreen.image=space1.jpg
+class.TitleScreen.image=Swamp.jpg
 dependency1.from=MyWorld
 dependency1.to=Label
 dependency1.type=UsesDependency

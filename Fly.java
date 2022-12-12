@@ -4,18 +4,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * The fly will move
  * 
  * @author Anya Shah 
- * @version November 28th, 2022
+ * @version December 12th, 2022
  */
 public class Fly extends Actor
 {
-    /**
-     * Act - do whatever the Fly wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    int speed = 1;
     public void act()
     {
         int x = getX();
-        int y = getY() + 1;
+        int y = getY() + speed;
         setLocation(x, y);
         
         // Remove fly and draw game over when fly gets to bottom
@@ -25,5 +22,9 @@ public class Fly extends Actor
             world.gameOver();
             world.removeObject(this);
         }
+    }
+    public void setSpeed(int spd)
+    {
+        speed = spd;
     }
 }
