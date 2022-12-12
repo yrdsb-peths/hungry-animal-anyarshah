@@ -17,7 +17,7 @@ public class TitleScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        addObject(titleLabel, 245, 50);
+        addObject(titleLabel, getWidth()/2, 50);
         prepare();
     }
 
@@ -37,7 +37,7 @@ public class TitleScreen extends World
     private void prepare()
     {
         Frog frog = new Frog();
-        addObject(frog,512,85);
+        addObject(frog,getWidth()/2,161);
         Label label1 = new Label("Press <space> to start the game!", 40);
         addObject(label1,getWidth()/2,245);
         Label label2 = new Label("Use \u2190 and \u2192 to move!", 40);
