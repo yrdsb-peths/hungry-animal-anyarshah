@@ -40,7 +40,7 @@ public class TitleScreen extends World
         addObject(frog,512,85);
         Label label1 = new Label("Press <space> to start the game!", 40);
         addObject(label1,getWidth()/2,245);
-        Label label2 = new Label("Use <-- and --> to move!", 40);
+        Label label2 = new Label("Use \u2190 and \u2192 to move!", 40);
         addObject(label2,getWidth()/2,306);
     }
 }
