@@ -39,8 +39,10 @@ public class TitleScreen extends World
         Frog frog = new Frog();
         addObject(frog,getWidth()/2,161);
         Label label1 = new Label("Press <space> to start the game!", 40);
-        addObject(label1,getWidth()/2,245);
+        addObject(label1,getWidth()/2,300);
         Label label2 = new Label("Use \u2190 and \u2192 to move!", 40);
-        addObject(label2,getWidth()/2,306);
+        addObject(label2,getWidth()/2,350);
+        Label label3 = new Label("Help eat the insects!", 40);
+        addObject(label3,getWidth()/2,250);
     }
 }

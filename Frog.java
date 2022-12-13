@@ -68,12 +68,12 @@ public class Frog extends Actor
     {
         if(Greenfoot.isKeyDown("right"))
         {
-            move(2);
+            move(3);
             facing = "right";
         }
         if(Greenfoot.isKeyDown("left"))
         {
-            move(-2);
+            move(-3);
             facing = "left";
         }
         // Removes fly if frog touches it
@@ -92,6 +92,14 @@ public class Frog extends Actor
             removeTouching(Fly.class);
             MyWorld world = (MyWorld) getWorld();
             world.spawnFly();
+            world.increaseScore();
+            frogSound.play();
+        }
+        if(isTouching(Ladybug.class))
+        {
+            removeTouching(Ladybug.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnLadybug();
             world.increaseScore();
             frogSound.play();
         }

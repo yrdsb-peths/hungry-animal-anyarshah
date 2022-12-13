@@ -22,7 +22,7 @@ public class MyWorld extends World
         
         // Create frog object
         Frog frog = new Frog();
-        addObject(frog, 50, 200);
+        addObject(frog, 50, 350);
         
         // Create a label
         scoreLabel = new Label(0, 80);
@@ -30,6 +30,8 @@ public class MyWorld extends World
          
         // Adds a fly randomly on the world
         spawnFly();
+        // Adds a ladybug randomly on the world
+        spawnLadybug();
     }
     
     /*
@@ -37,7 +39,7 @@ public class MyWorld extends World
      */
     public void gameOver()
     {
-        Label gameOverLabel = new Label ("Game Over! :( ", 100);
+        Label gameOverLabel = new Label ("Game Over!", 100);
         addObject(gameOverLabel, 300, 200);
     }
     
@@ -48,18 +50,25 @@ public class MyWorld extends World
     {
         score++;
         scoreLabel.setValue(score);
-        if(score % 5 == 0)
+        if(score % 10 == 0)
         {
             level += 1;
         }
     }
-    
     public void spawnFly()
     {
         Fly fly = new Fly();
         fly.setSpeed(level);
-        int x = Greenfoot.getRandomNumber(500);
+        int x = Greenfoot.getRandomNumber(400);
         int y = 10;
-        addObject(fly, x, y);
+        addObject(fly, (x + 10), y);
+    }
+    public void spawnLadybug()
+    {
+        Ladybug ladybug = new Ladybug();
+        ladybug.setSpeed(level);
+        int x = Greenfoot.getRandomNumber(400);
+        int y = 10;
+        addObject(ladybug, (x + 10), y);
     }
 }
