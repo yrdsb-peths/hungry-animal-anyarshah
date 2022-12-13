@@ -59,16 +59,16 @@ public class MyWorld extends World
     {
         Fly fly = new Fly();
         fly.setSpeed(level);
-        int x = Greenfoot.getRandomNumber(400);
+        int x = Greenfoot.getRandomNumber(500);
         int y = 10;
-        addObject(fly, (x + 10), y);
+        addObject(fly, (x + 100), y);
     }
     public void spawnLadybug()
     {
         Ladybug ladybug = new Ladybug();
         ladybug.setSpeed(level);
-        int x = Greenfoot.getRandomNumber(400);
+        int x = Greenfoot.getRandomNumber(500);
         int y = 10;
-        addObject(ladybug, (x + 10), y);
+        addObject(ladybug, (x + 100), y);
     }
 }

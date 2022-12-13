@@ -21,6 +21,7 @@ public class Ladybug extends Actor
         {
             world.gameOver();
             world.removeObject(this);
+            Greenfoot.stop();
         }
     }
     public void setSpeed(int spd)
