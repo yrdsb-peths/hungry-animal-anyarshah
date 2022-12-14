@@ -24,8 +24,6 @@ public class Ladybug extends Actor
             Greenfoot.stop();
         }
     }
-    
-    //Set frog speed
     public void setSpeed(int spd)
     {
         speed = spd;
