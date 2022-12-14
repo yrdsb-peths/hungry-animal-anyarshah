@@ -8,6 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Fly extends Actor
 {
+    /** 
+     * The integer that allows the fly's y position to change. In other words,
+     * it allows it to "fly" to the ground.
+     */
     int speed = 1;
     public void act()
     {
